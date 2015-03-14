@@ -188,9 +188,9 @@ module Nanoc::Helpers
           # Add podcast enclosure
 	  # added for podcasting
           if format == 'mp3'
-            xml.enclosure(url:"http://yourURL.com/mp3/" + a[:mp3],length:File.size("content/mp3/" + a[:mp3]), type:"audio/mpeg")
+            xml.link(rel:"enclosure",href:"http://3dinnerphoto.com/mp3/" + a[:mp3],length:File.size("content/mp3/" + a[:mp3]), type:"audio/mpeg")
           elsif format == 'opus'
-              xml.enclosure(url:"http://yourURL.com/opus/" + a[:opus],length:File.size("content/opus/" + a[:opus]), type:"audio/mpeg")
+              xml.link(rel:"enclosure",href:"http://3dinnerphoto.com/opus/" + a[:mp3],length:File.size("content/opus/" + a[:mp3]), type:"audio/mpeg")
           end
 
           # Add content
